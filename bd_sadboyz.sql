@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-11-2023 a las 21:23:34
+-- Tiempo de generación: 06-11-2023 a las 21:29:50
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 5.6.32
 
@@ -21,29 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `bd_sadboyz`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `platillos`
---
-
-CREATE TABLE `platillos` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `precio` float(6,2) NOT NULL,
-  `disponible` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `platillos`
---
-
-INSERT INTO `platillos` (`id`, `nombre`, `precio`, `disponible`) VALUES
-(1, 'Mariscos', 50.00, 1),
-(2, 'Lazaña', 60.00, 1),
-(3, 'Chuleta con patatas', 85.00, 0),
-(4, 'Milaneza', 30.00, 1);
 
 -- --------------------------------------------------------
 
@@ -80,12 +57,6 @@ INSERT INTO `tbl_venta` (`id_venta`, `id_articulo`, `tipotarjeta`, `nip`, `id_su
 --
 
 --
--- Indices de la tabla `platillos`
---
-ALTER TABLE `platillos`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indices de la tabla `tbl_venta`
 --
 ALTER TABLE `tbl_venta`
@@ -94,12 +65,6 @@ ALTER TABLE `tbl_venta`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
-
---
--- AUTO_INCREMENT de la tabla `platillos`
---
-ALTER TABLE `platillos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_venta`
